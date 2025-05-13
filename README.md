@@ -48,5 +48,5 @@ Or via local network: `http://localhost:3000`
 
 ## 👨‍💻 Developed by
 
-**Manshi** - Front-end Devloper <br>
+**Manshi** – Front-end Devloper <br>
 **Ankit** – Back-end Devloper
