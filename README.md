@@ -47,4 +47,5 @@ Or via local network: `http://localhost:3000`
 - Notification system
 
 ## 👨‍💻 Developed by
-**Ankit** – BCA Final Year
+**Manshi** - Frountend Devloper 
+**Ankit** – Backend Devloper

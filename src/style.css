@@ -1,0 +1,159 @@
+:root {
+    --primary: #28a745;
+    --secondary: #f0f7f1;
+    --highlight: #e8f5e9;
+    --text-dark: #333;
+    --text-light: #777;
+    --accent: #2196f3;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f9fbfc;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .logo i {
+    margin-right: 8px;
+  }
+  
+  .navbar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+  }
+  
+  .navbar nav a:hover {
+    color: var(--primary);
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    background: linear-gradient(to right, #d7f8d7, #e2f4ea);
+    padding: 4rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    color: #1b5e20;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: var(--text-light);
+  }
+  
+  .cta-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #1e7d34;
+  }
+  
+  /* Features */
+  .features {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: var(--highlight);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  /* Audience */
+  .audience {
+    background-color: var(--secondary);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .audience h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+  }
+  
+  .audience ul {
+    list-style: none;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-top: 1rem;
+  }
+  
+  .audience li {
+    margin: 0.5rem 0;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-top: 1px solid #ddd;
+  }
+  
+  

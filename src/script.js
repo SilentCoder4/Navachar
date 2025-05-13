@@ -1,0 +1,1 @@
+console.log("Navachar - Modern community platform loaded.");
