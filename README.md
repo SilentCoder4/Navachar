@@ -12,7 +12,7 @@
 ## 🛠 Tech Stack
 - **Frontend**: React.js  
 - **Backend**: Node.js + Express  
-- **Database**: MongoDB  
+- **Database**: MySQL  
 - **Hosting**: Local network or cloud (Render/Vercel)
 
 ## 🎯 Use Cases
@@ -26,15 +26,16 @@
 Clone the repo and install dependencies:
 
 ```bash
-# Backend
-cd backend
-npm install
-node server.js
+# json
+npm init
+# Requriments
+npm install express socket.io moment
+npm intall -D nedemon
 
 # Frontend
-cd ../frontend
-npm install
-npm start
+using Xampp
+or
+npm run dev
 ```
 
 Access locally at: `http://localhost:3000`  
