@@ -70,5 +70,5 @@ if (Array.isArray(users)) {
       userList.innerHTML = '<li>No users found</li>';
     }
   }
-  
+
   outputUsers(users);
