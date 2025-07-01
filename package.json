@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "moment": "^2.30.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "name": "navachar",
+  "version": "1.0.0",
+  "description": "Real time Discussions chats rooms for Navachar",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilentCoder4/Navachar.git"
+  },
+  "author": "Ankit Halder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilentCoder4/Navachar/issues"
+  },
+  "homepage": "https://github.com/SilentCoder4/Navachar#readme"
+}

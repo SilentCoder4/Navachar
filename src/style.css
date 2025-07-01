@@ -51,6 +51,24 @@
     color: var(--primary);
   }
   
+  .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #logout-link {
+    display: none;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  #logout-link:hover {
+    background-color: #1e7d34;
+  }
+  
   /* Hero Section */
   .hero {
     text-align: center;
@@ -148,11 +166,10 @@
   
   /* Footer */
   .footer {
-    background: #ffffff;
+    background: #000000;
     padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
-    color: var(--text-light);
     border-top: 1px solid #ddd;
   }
   
