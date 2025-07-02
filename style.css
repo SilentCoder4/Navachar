@@ -105,25 +105,29 @@
   
   /* Features */
   .features {
+	text-decoration: none;
     padding: 4rem 2rem;
     background: #ffffff;
     text-align: center;
   }
   
-  .features h2 {
+  .features h3 {
+	text-decoration: none;
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--primary);
   }
   
   .feature-grid {
+	text-decoration: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
   }
   
   .card {
-    background-color: var(--highlight);
+	text-decoration: none;
+	background-color: var(--highlight);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.06);

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collective Solutions | Community Empowerment Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-light-green: #e8f5e9;
+            --primary-dark-green: #2e7d32;
+            --accent-green: #81c784;
+            --text-dark: #263238;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: var(--text-dark);
+            background-color: #fafafa;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .impact-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark-green);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-lg">CS</span>
+                </div>
+                <span class="text-xl font-semibold text-green-800">Collective Solutions</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-green-700 hover:text-green-900 font-medium">Home</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-green-700 font-medium">Projects</a></li>
+                    <li><a href="#resources" class="text-gray-600 hover:text-green-700 font-medium">Resources</a></li>
+                    <li><a href="#impact" class="text-gray-600 hover:text-green-700 font-medium">Impact</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-green-700 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Empowering Communities Through Collective Action</h1>
+                <p class="text-xl text-gray-600 mb-8">We connect grassroots initiatives with resources, knowledge and networks to create sustainable change.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#projects" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Explore Projects</a>
+                    <a href="#contact" class="bg-white hover:bg-gray-100 text-green-700 border border-green-600 px-6 py-3 rounded-lg font-medium transition duration-300">Join Our Network</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Community-Led Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover initiatives making a real difference in local communities around the world.</p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex bg-gray-100 rounded-lg p-1">
+                    <button class="px-4 py-2 rounded-lg font-medium bg-white text-green-700 shadow-sm">All</button>
+                    <button class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:bg-white">Education</button>
+                    <button class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:bg-white">Environment</button>
+                    <button class="px-4 py-2 rounded-lg font-medium text-gray-600 hover:bg-white">Health</button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0cf1546d-71a7-4077-b078-9c1fb911c514.png" alt="Group of diverse people planting trees in an urban community garden" />
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 font-medium">Environment</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Urban Reforestation</h3>
+                        <p class="text-gray-600 mb-4">Community-led tree planting initiative transforming vacant lots into green spaces.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center">Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e05e99be-934c-42e6-966e-f623b6fdb858.png" alt="Adult literacy program with smiling participants reading books together" />
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 font-medium">Education</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Community Literacy</h3>
+                        <p class="text-gray-600 mb-4">Volunteer-run program providing adult education and digital skills training.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center">Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d22539b0-b59e-464c-a0c9-ff9b8b03a4dc.png" alt="Mobile health clinic parked in a rural village with healthcare workers" />
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-600 font-medium">Health</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Mobile Health Clinics</h3>
+                        <p class="text-gray-600 mb-4">Bringing essential healthcare services to remote underserved communities.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center">Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 font-medium">
+                    View All Projects
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Resources & Knowledge</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tools, guides and training materials to help your community initiative succeed.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Starter Guides</h3>
+                    <p class="text-gray-600 mb-4">Step-by-step guides for launching community projects in various sectors.</p>
+                    <a href="#" class="text-green-600 font-medium flex items-center">Access Resources</a>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Events & Training</h3>
+                    <p class="text-gray-600 mb-4">Workshops and webinars on community organizing and sustainable development.</p>
+                    <a href="#" class="text-green-600 font-medium flex items-center">View Calendar</a>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Community Forum</h3>
+                    <p class="text-gray-600 mb-4">Connect with other organizers and share challenges, solutions and best practices.</p>
+                    <a href="#" class="text-green-600 font-medium flex items-center">Join Discussions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-16 bg-green-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Collective Impact</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Together with community partners worldwide, we're creating meaningful change.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="impact-number mb-2">120+</div>
+                    <p class="text-green-100">Community Projects Supported</p>
+                </div>
+                <div class="text-center">
+                    <div class="impact-number mb-2">3,500+</div>
+                    <p class="text-green-100">People Directly Benefited</p>
+                </div>
+                <div class="text-center">
+                    <div class="impact-number mb-2">28</div>
+                    <p class="text-green-100">Countries With Active Communities</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-green-700 rounded-lg p-6">
+                    <div class="mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d138357f-6bbb-4a09-9d5a-66c0eff4b320.png" alt="Portrait of community leader Maria Rodriguez smiling" class="w-12 h-12 rounded-full object-cover mx-auto" />
+                    </div>
+                    <p class="italic mb-4">"The Collective Solutions platform helped us connect with mentors and secure funding that transformed our neighborhood cleanup initiative."</p>
+                    <p class="font-medium">Maria Rodriguez<br><span class="opacity-80">Community Leader</span></p>
+                </div>
+                
+                <div class="bg-green-700 rounded-lg p-6">
+                    <div class="mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/349e7a40-f891-484d-9fc3-860acda6445c.png" alt="Portrait of youth organizer Jamal Carter speaking at event" class="w-12 h-12 rounded-full object-cover mx-auto" />
+                    </div>
+                    <p class="italic mb-4">"As a young organizer, the training resources helped me develop skills I couldn't get anywhere else. This is more than a platform—it's a movement."</p>
+                    <p class="font-medium">Jamal Carter<br><span class="opacity-80">Youth Organizer</span></p>
+                </div>
+                
+                <div class="bg-green-700 rounded-lg p-6">
+                    <div class="mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fcf77626-0662-4337-af6b-feb66dffa3a6.png" alt="Portrait of nonprofit director Dr. Anita Kumar holding clipboard" class="w-12 h-12 rounded-full object-cover mx-auto" />
+                    </div>
+                    <p class="italic mb-4">"We've scaled our health outreach to three new villages thanks to the partnership opportunities we found through Collective Solutions."</p>
+                    <p class="font-medium">Dr. Anita Kumar<br><span class="opacity-80">Nonprofit Director</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to make a difference in your community?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Whether you're just starting out or looking to expand an existing initiative, we're here to support your community empowerment journey.</p>
+            <a href="#contact" class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 font-medium transition duration-300">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                    <p class="text-gray-600">Have questions about starting or supporting a community project? We'd love to hear from you.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-green-100 p-8 flex flex-col justify-center">
+                            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                            <div class="mb-6">
+                                <div class="flex items-start mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mt-0.5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>hello@collectivesolutions.org</span>
+                                </div>
+                                <div class="flex items-start mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mt-0.5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mt-0.5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span>123 Community Way<br>San Francisco, CA 94103</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition duration-300">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center mr-2">
+                            <span class="text-white font-bold text-sm">CS</span>
+                        </div>
+                        <span class="text-white font-semibold">Collective Solutions</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Careers</a>
+                    <a href="#" class="hover:text-white transition">FAQ</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 Collective Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('#projects button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active styles from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-white', 'text-green-700', 'shadow-sm');
+                        btn.classList.add('text-gray-600', 'hover:bg-white');
+                    });
+                    
+                    // Add active styles to clicked button
+                    this.classList.add('bg-white', 'text-green-700', 'shadow-sm');
+                    this.classList.remove('text-gray-600', 'hover:bg-white');
+                    
+                    // In a real implementation, you would filter projects here
+                });
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('header button.md\\:hidden');
+            mobileMenuButton.addEventListener('click', function() {
+                alert('Mobile menu would open here in a full implementation');
+            });
+        });
+    </script>
+</body>
+</html>
+

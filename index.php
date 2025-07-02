@@ -49,17 +49,17 @@
     <h2>🌟 Platform Highlights</h2>
     <div class="feature-grid">
       <div class="card">
-        <a href="#"><i class="fas fa-comments feature-icon"></i></a>
+        <a href="http://localhost:3000/" _target="bank"><i class="fas fa-comments feature-icon"></i></a>
         <h3>Collaborative Discussions</h3>
         <p>Share ideas, solve issues, and connect with your community in meaningful conversations.</p>
       </div>
       <div class="card">
-        <a href="#"><i class="fas fa-calendar-alt feature-icon"></i></a>
+        <a href="_event_management_/_event_management_.html"><i class="fas fa-calendar-alt feature-icon"></i></a>
         <h3>Event Management</h3>
         <p>Plan and promote local gatherings, training sessions, and campaigns effortlessly.</p>
       </div>
       <div class="card">
-        <a href="events/events.html"><i class="fas fa-lightbulb feature-icon"></i></a>
+        <a href="_collective_solutions_/_collective_solutions_.html"><i class="fas fa-lightbulb feature-icon"></i></a>
         <h3>Collective Solutions</h3>
         <p>Brainstorm and develop sustainable ideas to address community challenges.</p>
       </div>

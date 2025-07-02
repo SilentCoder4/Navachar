@@ -49,15 +49,21 @@ io.on('connection', socket => {
 
     // run when user disconnects
     socket.on('disconnect', () => {
-        const user = userLeave(socket.id);
+      const user = userLeave(socket.id);
 
-        if(user)    {
-            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the chat`));
+      if (user) {
+         io.to(user.room).emit(
+            'message',
+            formatMessage(botName, `${user.username} has left the chat!`)
+         );
 
-            //send user and room 
-            io.to(user.room).emit('message', formatMessage(user.username, msg));
-        };
-    });
+         // send users and room info
+         io.to(user.room).emit('roomUsers', {
+            room: user.room,
+            users: getRoomUsers(user.room),
+         });
+      }
+   });
 });
 
 const PORT = 3000 || process.env.PORT;

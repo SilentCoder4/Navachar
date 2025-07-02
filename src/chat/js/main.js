@@ -8,7 +8,7 @@ const { username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
 
-console.log(username, room);
+//console.log(username, room);
 
 const socket = io();
 
@@ -18,12 +18,12 @@ socket.emit('joinRoom', { username, room })
 //Get room and user
 socket.on('roomUsers', ({ room, users }) => {
     outputRoomName(room);
-    outputUsers(users);
+    outputUsers(users);	
 });
 
 // Message from server
 socket.on('message', (message) => {
-    console.log(message);
+    //console.log(message);
     outputMessage(message);
 
     // Scroll down
@@ -31,7 +31,7 @@ socket.on('message', (message) => {
 });
 
 // Message submit
-chatForm.addEventListener('submit', e => {
+chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const msg = e.target.elements.msg.value;
@@ -62,13 +62,10 @@ function outputRoomName(room) {
     roomName.innerText = room;
 }
 
+	  //console.log(users);
 //add user to DOM
 function outputUsers(users) {
-if (Array.isArray(users)) {
-      userList.innerHTML = users.map(user => `<li>${user.username}</li>`).join('');
-    } else {
-      userList.innerHTML = '<li>No users found</li>';
-    }
-  }
-
-  outputUsers(users);
+   userList.innerHTML = `
+      ${users?.map((user) => `<li>${user.username}</li>`).join('')}
+   `;
+}
