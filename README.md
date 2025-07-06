@@ -38,7 +38,7 @@ or
 npm run dev
 ```
 
-Access locally at: `http://localhost:3000`  
+Access locally at: `http://localhost`  
 Or via local network: `http://localhost:3000`
 
 ## 💡 Future Enhancements
