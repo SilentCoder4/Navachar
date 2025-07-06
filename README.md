@@ -5,15 +5,15 @@
 ## 🚀 Features
 - 📢 Community forum for sharing thoughts, issues, and ideas  
 - 📅 Event announcements and updates  
-- 🌍 Accessible over local or cloud network  
-- 💬 Real-time interaction (future scope)  
+- 🌍 Accessible over local LAN
+- 💬 Real-time Discussion 
 - 🔒 Admin moderation and user login (planned features)
 
 ## 🛠 Tech Stack
-- **Frontend**: React.js  
+- **Frontend**: CSS & JS
 - **Backend**: Node.js + Express  
-- **Database**: MySQL  
-- **Hosting**: Local network or cloud (Render/Vercel)
+- **Database**: MySQL
+- **Hosting**: Local network
 
 ## 🎯 Use Cases
 - Rural or village digital empowerment  
@@ -26,26 +26,30 @@
 Clone the repo and install dependencies:
 
 ```bash
-# json
-npm init
-# Requriments
-npm install express socket.io moment
-npm intall -D nedemon
+# Backend
+cd backend
+npm install
+node server.js
 
 # Frontend
-using Xampp
-or
-npm run dev
+cd ../frontend
+npm install
+npm start
 ```
 
-Access locally at: `http://localhost:3000`  
-Or via local network: `http://localhost:3000`
+MySQL database setup
+ - creat database name **"navachar"**
+ - import the file **"navachar.sql"**
+
+
+
+Access locally at: `http://localhost/navachar/`
 
 ## 💡 Future Enhancements
-- User login & authentication  
-- Mobile app version  
-- AI-based community insights  
-- Notification system
+- User login & authentication  (done)
+- Mobile app version  (in development)
+- AI-based community insights  (future update)
+- Notification system (future update)
 
 ## 👨‍💻 Developed by
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,8 @@
             z-index: 0;
         }
 
-        header h1, header p {
+        header h1,
+        header p {
             position: relative;
             z-index: 1;
         }
@@ -124,7 +126,8 @@
             font-weight: 500;
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             background-color: var(--primary-green);
             color: white;
             border-color: var(--primary-green);
@@ -235,8 +238,8 @@
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: var(--transition);
             font-weight: 500;
+            transition: var(--transition);
         }
 
         .register-btn:hover {
@@ -244,10 +247,18 @@
             transform: translateY(-2px);
         }
 
+        /* When user is already registered */
         .register-btn.registered {
             background-color: #9e9e9e;
             cursor: not-allowed;
+            pointer-events: none;
+            transform: none;
         }
+
+        .register-btn.registered:hover {
+            background-color: #9e9e9e;
+        }
+
 
         .modal {
             display: none;
@@ -398,6 +409,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -514,13 +526,13 @@
         // Render events
         function renderEvents(eventsToRender) {
             eventsContainer.innerHTML = '';
-            
+
             eventsToRender.forEach(event => {
                 const eventElement = document.createElement('div');
                 eventElement.className = 'event-card';
-                
+
                 const isRegistered = registeredEvents.includes(event.id);
-                
+
                 eventElement.innerHTML = `
                     <div class="event-image">
                         <img src="${event.image}" alt="${event.title} event at ${event.location}">
@@ -540,10 +552,10 @@
                         </div>
                     </div>
                 `;
-                
+
                 eventsContainer.appendChild(eventElement);
             });
-            
+
             // Add event listeners to register buttons
             document.querySelectorAll('.register-btn:not(.registered)').forEach(btn => {
                 btn.addEventListener('click', openRegistrationForm);
@@ -564,24 +576,24 @@
         // Filter events
         function filterEvents() {
             let filteredEvents;
-            
+
             // Filter by type
             if (currentFilter === 'all') {
                 filteredEvents = [...events];
             } else {
                 filteredEvents = events.filter(event => event.type === currentFilter);
             }
-            
+
             // Filter by search term
             const searchTerm = searchInput.value.toLowerCase();
             if (searchTerm) {
-                filteredEvents = filteredEvents.filter(event => 
-                    event.title.toLowerCase().includes(searchTerm) || 
+                filteredEvents = filteredEvents.filter(event =>
+                    event.title.toLowerCase().includes(searchTerm) ||
                     event.description.toLowerCase().includes(searchTerm) ||
                     event.location.toLowerCase().includes(searchTerm)
                 );
             }
-            
+
             renderEvents(filteredEvents);
         }
 
@@ -589,7 +601,7 @@
         function openRegistrationForm() {
             const eventId = parseInt(this.getAttribute('data-event-id'));
             const event = events.find(e => e.id === eventId);
-            
+
             modalBody.innerHTML = `
                 <h2>Register for ${event.title}</h2>
                 <form id="registrationForm">
@@ -609,7 +621,7 @@
                     <button type="submit" class="submit-btn">Complete Registration</button>
                 </form>
             `;
-            
+
             document.getElementById('registrationForm').addEventListener('submit', handleRegistrationSubmit);
             registerModal.classList.add('show');
         }
@@ -617,21 +629,26 @@
         // Handle registration submission
         function handleRegistrationSubmit(e) {
             e.preventDefault();
-            
+
             const eventId = parseInt(document.getElementById('eventId').value);
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            // In a real app, you would send this data to a server
-            console.log(`Registration for event ${eventId}: ${name} <${email}>`);
-            
-            // Mark as registered
-            registeredEvents.push(eventId);
-            localStorage.setItem('registeredEvents', JSON.stringify(registeredEvents));
-            
-            // Show confirmation
-            const event = events.find(e => e.id === eventId);
-            modalBody.innerHTML = `
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            fetch('register_event.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ event_id: eventId, name, email, phone })
+            })
+                .then(res => res.json())
+                .then(response => {
+                    const event = events.find(e => e.id === eventId);
+
+                    if (response.status === 'success') {
+                        registeredEvents.push(eventId);
+                        localStorage.setItem('registeredEvents', JSON.stringify(registeredEvents));
+
+                        modalBody.innerHTML = `
                 <div class="confirmation">
                     <h2>Registration Complete!</h2>
                     <p>Thank you for registering for <strong>${event.title}</strong>.</p>
@@ -639,9 +656,19 @@
                     <button class="confirmation-btn" id="confirmationBtn">Close</button>
                 </div>
             `;
-            
-            document.getElementById('confirmationBtn').addEventListener('click', closeModal);
+                        document.getElementById('confirmationBtn').addEventListener('click', closeModal);
+                    } else if (response.status === 'duplicate') {
+                        alert("⚠️ " + response.message);
+                    } else {
+                        alert("❌ Error: " + response.message);
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch error:", err);
+                    alert("⚠️ Registration failed. Try again.");
+                });
         }
+
 
         // Close modal
         function closeModal() {
@@ -666,5 +693,5 @@
         filterEvents();
     </script>
 </body>
-</html>
 
+</html>

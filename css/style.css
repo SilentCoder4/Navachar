@@ -20,55 +20,66 @@
     line-height: 1.6;
   }
   
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary);
-  }
-  
-  .logo i {
-    margin-right: 8px;
-  }
-  
-  .navbar nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: var(--text-dark);
-    transition: color 0.3s;
-  }
-  
-  .navbar nav a:hover {
-    color: var(--primary);
-  }
-  
-  .user-menu {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  #logout-link {
-    display: none;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-  }
-  #logout-link:hover {
-    background-color: #1e7d34;
-  }
-  
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+/* Navigation links */
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--primary);
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#logout-link {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+#logout-link:hover {
+  background-color: #1e7d34;
+}
+
   /* Hero Section */
   .hero {
     text-align: center;

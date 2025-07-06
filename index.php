@@ -1,39 +1,47 @@
-<?php 
-  session_start(); 
-  include('user/connect.php');
+<?php
+session_start();
+include('user/connect.php');
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Navachar - Empowering Communities</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
-   <header class="navbar">
+  <header class="navbar">
     <div class="logo"><i class="fas fa-leaf"></i> Navachar</div>
     <nav id="nav-links">
       <a href="#">Home</a>
       <a href="#">Features</a>
       <?php if (isset($_SESSION['email'])): ?>
-        <?php 
-          $email = $_SESSION['email'];
-          $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE email='$email'");
-          $user = mysqli_fetch_assoc($query);
+        <?php
+        $email = $_SESSION['email'];
+        $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE email='$email'");
+        $user = mysqli_fetch_assoc($query);
         ?>
-        <div class="user-menu" id="user-menu">
-          <i class="fas fa-user-circle"></i>
-          <span><?php echo htmlspecialchars($user['firstName']); ?></span>
+        <?php if ($user): ?>
+          <div class="user-menu" id="user-menu">
+            <i class="fas fa-user-circle"></i>
+            <span><?php echo htmlspecialchars($user['firstName']); ?></span>
+            <a href="user/logout.php" id="logout-link">Logout</a>
+          </div>
+        <?php else: ?>
+          <!-- fallback if user not found in DB -->
           <a href="user/logout.php" id="logout-link">Logout</a>
-        </div>
+        <?php endif; ?>
       <?php else: ?>
         <a href="user/index.php" id="login-link">Login</a>
         <a href="user/index.php" id="register-link">Register</a>
       <?php endif; ?>
+
     </nav>
   </header>
 
@@ -79,6 +87,7 @@
   <footer class="footer">
     <p>&copy; 2025 Navachar. Empowering Change, Together.</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
